@@ -1,0 +1,298 @@
+[
+  {
+    "source": "src/img/trainingimg/ss1.jpg",
+    "output": "src/img/trainingimg/ss1.optimized.webp",
+    "before": 27289,
+    "after": 26216,
+    "width": 600,
+    "height": 422
+  },
+  {
+    "source": "src/img/trainingimg/adimurai.png",
+    "output": "src/img/trainingimg/adimurai.optimized.webp",
+    "before": 53069,
+    "after": 6660,
+    "width": 600,
+    "height": 422
+  },
+  {
+    "source": "src/img/trainingimg/yoga.png",
+    "output": "src/img/trainingimg/yoga.optimized.webp",
+    "before": 19664,
+    "after": 3788,
+    "width": 600,
+    "height": 422
+  },
+  {
+    "source": "src/img/trainingimg/arrow.png",
+    "output": "src/img/trainingimg/arrow.optimized.webp",
+    "before": 48945,
+    "after": 8938,
+    "width": 600,
+    "height": 422
+  },
+  {
+    "source": "src/img/record/kbor4.jpg",
+    "output": "src/img/record/kbor4.optimized.webp",
+    "before": 752151,
+    "after": 196220,
+    "width": 1600,
+    "height": 907
+  },
+  {
+    "source": "src/img/record/18hrs1.JPG",
+    "output": "src/img/record/18hrs1.optimized.webp",
+    "before": 2566809,
+    "after": 137088,
+    "width": 1600,
+    "height": 742
+  },
+  {
+    "source": "src/img/staff/VikiPhoto.jpeg",
+    "output": "src/img/staff/VikiPhoto.optimized.webp",
+    "before": 110173,
+    "after": 45264,
+    "width": 538,
+    "height": 800
+  },
+  {
+    "source": "src/img/staff/Bhuvana.png",
+    "output": "src/img/staff/Bhuvana.optimized.webp",
+    "before": 189285,
+    "after": 19086,
+    "width": 420,
+    "height": 594
+  },
+  {
+    "source": "src/img/staff/Dinesh.png",
+    "output": "src/img/staff/Dinesh.optimized.webp",
+    "before": 259144,
+    "after": 26556,
+    "width": 408,
+    "height": 612
+  },
+  {
+    "source": "src/img/AFFILIATIONS/iya.png",
+    "output": "src/img/AFFILIATIONS/iya.optimized.webp",
+    "before": 13965,
+    "after": 5536,
+    "width": 165,
+    "height": 133
+  },
+  {
+    "source": "src/img/trainingimg/karate.png",
+    "output": "src/img/trainingimg/karate.optimized.webp",
+    "before": 34212,
+    "after": 4762,
+    "width": 600,
+    "height": 422
+  },
+  {
+    "source": "src/img/trainingimg/valari.png",
+    "output": "src/img/trainingimg/valari.optimized.webp",
+    "before": 43888,
+    "after": 5062,
+    "width": 600,
+    "height": 422
+  },
+  {
+    "source": "src/img/staff/rishi.png",
+    "output": "src/img/staff/rishi.optimized.webp",
+    "before": 50715,
+    "after": 8740,
+    "width": 190,
+    "height": 205
+  },
+  {
+    "source": "src/img/staff/Prem.png",
+    "output": "src/img/staff/Prem.optimized.webp",
+    "before": 242838,
+    "after": 19794,
+    "width": 436,
+    "height": 573
+  },
+  {
+    "source": "src/img/record/uk.jpg",
+    "output": "src/img/record/uk.optimized.webp",
+    "before": 17428,
+    "after": 9370,
+    "width": 172,
+    "height": 172
+  },
+  {
+    "source": "src/img/record/sa.jpg",
+    "output": "src/img/record/sa.optimized.webp",
+    "before": 235401,
+    "after": 97054,
+    "width": 1280,
+    "height": 1280
+  },
+  {
+    "source": "src/img/record/18hrs2.JPG",
+    "output": "src/img/record/18hrs2.optimized.webp",
+    "before": 2707792,
+    "after": 107268,
+    "width": 1600,
+    "height": 735
+  },
+  {
+    "source": "src/img/record/18hrs4.JPG",
+    "output": "src/img/record/18hrs4.optimized.webp",
+    "before": 2693270,
+    "after": 140292,
+    "width": 1600,
+    "height": 747
+  },
+  {
+    "source": "src/img/record/kbor1.jpg",
+    "output": "src/img/record/kbor1.optimized.webp",
+    "before": 1942985,
+    "after": 94092,
+    "width": 1600,
+    "height": 722
+  },
+  {
+    "source": "src/img/record/kbor2.jpg",
+    "output": "src/img/record/kbor2.optimized.webp",
+    "before": 1902410,
+    "after": 105698,
+    "width": 1600,
+    "height": 722
+  },
+  {
+    "source": "src/img/record/kbor3.jpg",
+    "output": "src/img/record/kbor3.optimized.webp",
+    "before": 2289897,
+    "after": 139550,
+    "width": 1600,
+    "height": 722
+  },
+  {
+    "source": "src/img/record/sboa1.jpg",
+    "output": "src/img/record/sboa1.optimized.webp",
+    "before": 3961727,
+    "after": 282770,
+    "width": 1600,
+    "height": 722
+  },
+  {
+    "source": "src/img/record/sboa2.jpg",
+    "output": "src/img/record/sboa2.optimized.webp",
+    "before": 4569792,
+    "after": 328560,
+    "width": 1600,
+    "height": 722
+  },
+  {
+    "source": "src/img/record/sboa3.jpg",
+    "output": "src/img/record/sboa3.optimized.webp",
+    "before": 4885920,
+    "after": 368198,
+    "width": 1600,
+    "height": 722
+  },
+  {
+    "source": "src/img/record/sboa4.jpg",
+    "output": "src/img/record/sboa4.optimized.webp",
+    "before": 4703497,
+    "after": 360882,
+    "width": 1600,
+    "height": 722
+  },
+  {
+    "source": "src/img/record/sboa_r1.jpg",
+    "output": "src/img/record/sboa_r1.optimized.webp",
+    "before": 4601693,
+    "after": 292540,
+    "width": 1600,
+    "height": 722
+  },
+  {
+    "source": "src/img/record/sboa_r2.jpg",
+    "output": "src/img/record/sboa_r2.optimized.webp",
+    "before": 3479596,
+    "after": 218922,
+    "width": 1600,
+    "height": 722
+  },
+  {
+    "source": "src/img/record/sboa_r3.jpg",
+    "output": "src/img/record/sboa_r3.optimized.webp",
+    "before": 3833099,
+    "after": 267168,
+    "width": 1600,
+    "height": 722
+  },
+  {
+    "source": "src/img/record/sboa_r4.jpg",
+    "output": "src/img/record/sboa_r4.optimized.webp",
+    "before": 3838815,
+    "after": 263446,
+    "width": 1600,
+    "height": 722
+  },
+  {
+    "source": "src/img/ssfounder.jpg",
+    "output": "src/img/ssfounder.optimized.webp",
+    "before": 70339,
+    "after": 29280,
+    "width": 584,
+    "height": 640
+  },
+  {
+    "source": "src/img/news/Dina_Sangu.jpeg",
+    "output": "src/img/news/Dina_Sangu.optimized.webp",
+    "before": 207880,
+    "after": 189834,
+    "width": 1022,
+    "height": 1156
+  },
+  {
+    "source": "src/img/news/Kalai_thamilagam.jpeg",
+    "output": "src/img/news/Kalai_thamilagam.optimized.webp",
+    "before": 141357,
+    "after": 73446,
+    "width": 534,
+    "height": 599
+  },
+  {
+    "source": "src/img/news/Seithi_Alasal.jpeg",
+    "output": "src/img/news/Seithi_Alasal.optimized.webp",
+    "before": 109021,
+    "after": 100016,
+    "width": 901,
+    "height": 720
+  },
+  {
+    "source": "src/img/news/Udaga_malar.jpeg",
+    "output": "src/img/news/Udaga_malar.optimized.webp",
+    "before": 213580,
+    "after": 196082,
+    "width": 928,
+    "height": 1280
+  },
+  {
+    "source": "src/img/news/Urimai_kural.jpeg",
+    "output": "src/img/news/Urimai_kural.optimized.webp",
+    "before": 184081,
+    "after": 162164,
+    "width": 1216,
+    "height": 1080
+  },
+  {
+    "source": "src/img/record/18hrs3.JPG",
+    "output": "src/img/record/18hrs3.optimized.webp",
+    "before": 2768818,
+    "after": 162766,
+    "width": 1600,
+    "height": 738
+  },
+  {
+    "source": "public/images/silambam-hero.png",
+    "output": "public/images/silambam-hero.webp",
+    "before": 1985250,
+    "after": 101008,
+    "width": 1536,
+    "height": 1024
+  }
+]

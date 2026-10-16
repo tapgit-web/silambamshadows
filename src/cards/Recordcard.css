@@ -1,0 +1,79 @@
+*{
+  margin:0px;
+  padding: 0px;
+}
+.Recordcard {
+  border-radius: 20px 0px 0px 0px;
+  overflow: hidden;
+  background-color: var(--bglightgreen-01);
+  width: 100%;
+  max-width: 700px;
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+  border-top: 5px solid var(--bggreen-01);
+}
+
+.Recordcard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px 15px;
+}
+
+.icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.heading {
+  flex-grow: 1;
+  font-weight: bold;
+  font-size: 18px;
+   margin-left: 5px;
+}
+
+.date {
+  font-size: 16px;
+}
+
+.Recordcard-footer {
+  padding: 1px 15px;
+  font-size: 18px;
+  font-weight: bold;
+ 
+}
+
+.Recordcarousel {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.Recordcarousel-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Recordcarousel-image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.fade-animation1 {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+

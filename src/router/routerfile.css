@@ -1,0 +1,94 @@
+:root {
+
+    
+    --card-50:#5f3e37;
+
+    --bgcolor-60: #ffffff;
+
+
+    --bgcolor-50: #4f5356;
+    --bgcolor-70: #3e4851;
+  
+     --textcolor-70: #372420;
+    --textcolor-80: #fdfdfe;
+    --textcolor-90: #ffffff;
+  
+  }
+
+  .navfix1{
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+}
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 85px;
+    
+}
+
+.homeroter {
+    width: 17%;
+    margin-left: 20px;
+}
+
+.pages {
+    width: 100%;
+    height: auto; /* Automatically adjusts to content height */
+    
+   
+}
+.title1{
+    display: none;
+    width: 100%;
+    height: 200px;
+}
+.title1 img{
+    width: 100%;
+    height: 200px;
+}
+
+/* Optional: Responsive design */
+@media (min-width: 320px) and (max-width: 768px) {
+
+    /* .title1{
+       
+    } */
+    .title1{
+       display: flex;
+       justify-content: center;
+        width: 100%;
+        height: 75px;
+        background-color: var(--bggreen-01);
+    }
+    .title1 img{
+        width: 35%;
+        height: 65px;
+    }
+    
+    
+
+    .navfix1 {
+        top: auto;
+        height: 60px;
+    }
+    .container {
+        margin-top: 0px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        /* margin-bottom: 67px; */
+    }
+
+    .homeroter{
+        width: 100%;
+        margin: 0%;
+    }
+    .pages {
+        width: 100%;
+        margin: 0%;
+        margin-top: 70px;
+    }
+}

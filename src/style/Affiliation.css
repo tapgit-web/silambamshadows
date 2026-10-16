@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+   
+}
+
+
+.Affiliationmain{
+    background-color: white;
+    height: auto;
+    width: 99vw;
+    /* margin-top: 90px; */
+    margin-bottom: -10PX;
+    
+}
+.Affiliationhead{
+
+    color: #ffffff;
+    text-align: center;
+    text-justify: inter-word;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.Affiliationhead h1{
+    color: var(--bggreen-01);
+    width: 300px;
+    height: auto;
+    padding: 10px;
+    border-radius: 100px 0px 100px 0px;
+    border:var(--bggreen-01) 3px solid;
+}
+
+
+.Affiliationitems1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    min-height: 570px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+/* table */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .Affiliationmain {
+    width: 100vw;
+    margin-bottom: 0;
+  }
+
+  .Affiliationhead h1 {
+    width:150px;
+    font-size: 20px;
+  }
+
+  .Affiliationitems1 {
+    flex-direction: column;
+    gap: 15px;
+    min-height: auto;
+  }
+}
+/* Mobile */
+
+@media (min-width: 480px) and (max-width: 767px) {
+
+  .Affiliationmain {
+    width: 100vw;
+  }
+
+  .Affiliationhead {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .Affiliationhead h1 {
+    width:150px;
+    font-size: 20px;
+  }
+
+  .Affiliationitems1 {
+    flex-direction: column;
+    gap: 12px;
+    min-height: auto;
+  }
+}
+@media (max-width: 479px) {
+
+  .Affiliationmain {
+    width: 100vw;
+  }
+
+  .Affiliationhead h1 {
+    width:150px;
+    font-size: 20px;
+  }
+
+  .Affiliationitems1 {
+    flex-direction: column;
+    gap: 10px;
+    min-height: auto;
+  }
+}

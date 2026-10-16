@@ -1,0 +1,83 @@
+/* EventCards.css */
+.Eventcards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ column-gap: 153px;
+  padding: 10px;
+ 
+}
+
+.Eventcard {
+  height: 230px;
+  width: 612px;
+  padding: 20px;
+  /* border-radius: 12px; */
+   color: var(--bggreen-01);
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); */
+}
+
+.Eventblue-card {
+ 
+  color: var(--bggreen-01);
+}
+
+.Eventyellow-card {
+  
+  color: var(--bggreen-01);
+}
+
+.Eventcard-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--bggreen-01);
+  margin-bottom: 10px;
+}
+
+.Eventcard-divider {
+  border: 1px solid var(--bggreen-01);
+  margin-bottom: 15px;
+}
+
+.Eventcard-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-left: 70px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+.Eventcard-list li{
+  color: var(--bggreen-01);
+}
+
+@media (min-width: 320px) and (max-width: 768px){
+
+  .Eventcards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+
+ 
+}
+    .Eventcard {
+  height: 200px;
+  width: 300px;
+  
+}
+
+.Eventcard-list {
+ 
+  padding-left: 10px;
+  margin-left: 15px;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.Eventcard-title {
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--bggreen-01);
+  margin-bottom: 10px;
+}
+
+  }

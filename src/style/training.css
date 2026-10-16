@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+   
+}
+
+
+.Tmain{
+    
+    height: auto;
+    width: 99vw;
+    /* margin-top: 90px; */
+    margin-bottom: -10PX;
+    /* background-image: url("../img/s.png"); */
+    background-repeat: no-repeat;
+    object-fit:fill;
+    
+}
+.Thead{
+
+     color: #ffffff;
+    text-align: center;
+    text-justify: inter-word;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.Thead h1{
+    color: var(--bggreen-01);
+    width: 300px;
+    height: auto;
+    padding: 10px;
+    border-radius: 100px 0px 100px 0px;
+    border:var(--bggreen-01) 3px solid;
+}
+.items1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    min-height: 570px;
+    height: auto;
+    margin-bottom: 10px;
+   
+    
+   
+}
+
+.items1 .cardimg{
+  
+    padding: 50px;
+}
+.cardimg img{
+    width: 300px;
+    height: 300px;
+}
+
+
+@media (min-width: 320px) and (max-width: 768px) {
+   
+
+
+    .Tmain{
+        width: 100vw;
+       
+        
+    }
+    .items1{
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        height: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+       
+    }
+
+    .Thead h1{
+        width: 150px;
+        height: auto;
+        padding: 15px;
+        font-size: 20px;
+        
+    }
+
+}

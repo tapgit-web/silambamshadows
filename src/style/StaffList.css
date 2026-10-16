@@ -1,0 +1,59 @@
+.staffmain{
+    margin-top: 10px;
+}
+.staffcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.Shead h1{
+  color: var(--bggreen-01);
+    width: 300px;
+    height: auto;
+    padding: 10px;
+    border-radius: 100px 0px 100px 0px;
+    border:var(--bggreen-01) 3px solid;
+    
+ }
+ .Shead{
+  color: #ffffff;
+    text-align: center;
+    text-justify: inter-word;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+
+ }
+
+
+ 
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+/* table */
+@media (min-width: 768px) and (max-width: 1024px) {
+.Shead h1{
+  width:150px;
+    font-size: 20px;
+    
+ }
+ 
+}
+/* Mobile */
+
+@media (min-width: 480px) and (max-width: 767px) {
+
+  .Shead h1{
+  width:150px;
+    font-size: 20px;
+    
+ }
+}
+@media (max-width: 479px) {
+.Shead h1{
+  width:150px;
+    font-size: 20px;
+    
+ }
+}

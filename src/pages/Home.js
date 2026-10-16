@@ -1,0 +1,100 @@
+import { Link } from 'react-router-dom';
+import { FiArrowUpRight, FiArrowDown, FiArrowRight, FiTarget, FiShield, FiUsers, FiAward, FiPlus } from 'react-icons/fi';
+import PhotoGallery from '../gallary/PhotoGallery';
+import useHeroMotion from '../animation/useHeroMotion';
+import CountUp from '../animation/CountUp';
+import '../style/home.css';
+import silambam from '../img/trainingimg/ss1.optimized.webp';
+import adimurai from '../img/trainingimg/adimurai.optimized.webp';
+import yoga from '../img/trainingimg/yoga.optimized.webp';
+import archery from '../img/trainingimg/arrow.optimized.webp';
+import community from '../img/record/kbor4.optimized.webp';
+import record from '../img/record/18hrs1.optimized.webp';
+import trainer1 from '../img/staff/VikiPhoto.optimized.webp';
+import trainer2 from '../img/staff/Bhuvana.optimized.webp';
+import trainer3 from '../img/staff/Dinesh.optimized.webp';
+import federation from '../img/AFFILIATIONS/International_Silambam_Federation.avif';
+import indiaFederation from '../img/AFFILIATIONS/Silambam_Federation _of_India.avif';
+import tamilFederation from '../img/AFFILIATIONS/TamilNadu_Silambam_Federation.avif';
+import yogaAssociation from '../img/AFFILIATIONS/iya.optimized.webp';
+
+const programs = [
+  { name: 'Silambam', type: 'THE ART OF THE STAFF', image: silambam, description: 'Find your flow. Build your strength. Carry a tradition forward.', className: 'silambam' },
+  { name: 'Adimurai', type: 'STRENGTH WITH PURPOSE', image: adimurai, description: 'Develop confidence through the art of traditional self-defense.', className: 'adimurai' },
+  { name: 'Yoga', type: 'BALANCE FROM WITHIN', image: yoga, description: 'Reconnect with your body. Make room for a calmer mind.', className: 'yoga' },
+  { name: 'Archery', type: 'FOCUS IN EVERY MOMENT', image: archery, description: 'Turn patience and precision into your next personal best.', className: 'archery' },
+];
+
+export default function Home() {
+  const heroRef = useHeroMotion();
+  return (
+    <div className="home">
+      <section ref={heroRef} className="h-hero" aria-labelledby="hero-title">
+        <img className="h-hero-image" src="/images/silambam-hero.webp" width="1536" height="1024" alt="Silambam athlete holding a bamboo staff in a focused training stance" fetchPriority="high" />
+        <div className="h-hero-shade" />
+        <div className="h-hero-content">
+          <span className="eyebrow h-hero-eyebrow"><span /> ROOTED IN HERITAGE. DRIVEN BY YOU.</span>
+          <h1 id="hero-title" aria-label="Ancient roots. Modern warriors."><span className="h-title-line"><span>Ancient roots.</span></span><span className="h-title-line"><span>Modern</span></span><span className="h-title-line"><span>warriors.</span></span></h1>
+          <p>Discover the strength that’s already in you. Traditional martial arts. Expert guidance. A community that moves you forward.</p>
+          <div className="h-hero-actions">
+            <Link to="/contact" className="button button-lime">Start your journey <FiArrowUpRight aria-hidden="true" /></Link>
+            <Link to="/Training" className="h-hero-secondary">Explore our training <FiArrowRight aria-hidden="true" /></Link>
+          </div>
+          <div className="h-hero-community">
+            <div className="h-avatars" aria-hidden="true"><img src={trainer1} alt="" /><img src={trainer2} alt="" /><img src={trainer3} alt="" /></div>
+            <div><strong>300+ students. One shared passion.</strong><span>Your next chapter starts here.</span></div>
+          </div>
+        </div>
+        <div className="h-hero-location"><span /> MADURAI, TAMIL NADU</div>
+        <div className="h-hero-caption"><span>THE ART OF SILAMBAM</span><p>More than movement.<br /><strong>A way of life.</strong></p></div>
+        <a href="#disciplines" className="h-scroll" aria-label="Discover our disciplines"><FiArrowDown aria-hidden="true" /></a>
+        <div className="h-hero-bottom"><span>TRADITION IN EVERY MOVE. POSSIBILITY IN EVERY STEP.</span><span>EST. 2019</span></div>
+      </section>
+
+      <section className="h-stats h-wrap" aria-label="Our academy at a glance">
+        <p>A proud legacy.<br /><strong>A growing community.</strong></p>
+        <div><strong><CountUp value={300} /><span>+</span></strong><span>PASSIONATE STUDENTS</span></div>
+        <div><strong><CountUp value={20} /><span>+</span></strong><span>BRANCHES IN TAMIL NADU</span></div>
+        <div><strong><CountUp value={7} digits={2} /></strong><span>DISCIPLINES TO EXPLORE</span></div>
+      </section>
+
+      <section className="h-section h-programs" id="disciplines" aria-labelledby="disciplines-title">
+        <div className="h-wrap">
+          <div className="h-section-heading">
+            <div><span className="eyebrow">FIND YOUR DISCIPLINE</span><h2 id="disciplines-title">Different paths.<br />One stronger you.</h2></div>
+            <div className="h-heading-aside"><p>From the power of Silambam to the stillness of yoga. Find the practice that moves you.</p><Link className="h-text-link" to="/Training">Explore all disciplines <FiArrowUpRight aria-hidden="true" /></Link></div>
+          </div>
+          <div className="h-program-grid">{programs.map((program, i) => (
+            <Link to={'/Training#' + program.name.toLowerCase()} className={'h-program h-program-' + program.className} key={program.name}>
+              <div className="h-program-art"><span className="h-program-index">0{i + 1}</span><img src={program.image} alt="" loading="lazy" /><span className="h-program-art-label">{program.type}</span></div>
+              <div className="h-program-body"><div><h3>{program.name}</h3><span className="h-program-arrow"><FiArrowUpRight aria-hidden="true" /></span></div><p>{program.description}</p></div>
+            </Link>
+          ))}</div>
+          <div className="h-program-note"><span><FiPlus aria-hidden="true" /> Also discover Wrestling, Karate &amp; Valari</span><span>ALL AGES. ALL EXPERIENCE LEVELS.</span></div>
+        </div>
+      </section>
+
+      <div className="h-values-strip" aria-label="Discipline, confidence, community and heritage"><span>DISCIPLINE</span><span aria-hidden="true">✳</span><span>CONFIDENCE</span><span aria-hidden="true">✳</span><span>COMMUNITY</span><span aria-hidden="true">✳</span><span>HERITAGE</span><span aria-hidden="true">✳</span></div>
+
+      <section className="h-section h-wrap h-story" aria-labelledby="story-title">
+        <div className="h-story-visual"><img src={community} alt="Silambam Shadows students and trainers celebrating their achievements together" loading="lazy" /><div className="h-story-tag"><FiUsers aria-hidden="true" /><p>More than an academy.<br /><strong>A place to belong.</strong></p></div><span className="h-image-footnote">REAL PEOPLE. SHARED PROGRESS. THE SHADOWS FAMILY.</span></div>
+        <div className="h-story-content"><span className="eyebrow">THE SILAMBAM SHADOWS WAY</span><h2 id="story-title">Strong roots.<br />Stronger together.</h2><p>We believe strength is more than physical. It’s the focus to keep going, the confidence to try, and the people who stand beside you.</p><p>Founded in 2019 by Ramkumar P, Silambam Shadows brings traditional Indian martial arts to a new generation—one student, one practice, one breakthrough at a time.</p><div className="h-benefits"><div><FiTarget aria-hidden="true" /><span>Train with purpose</span></div><div><FiShield aria-hidden="true" /><span>Grow in confidence</span></div><div><FiUsers aria-hidden="true" /><span>Find your people</span></div><div><FiAward aria-hidden="true" /><span>Carry a legacy</span></div></div><Link className="h-text-link" to="/About">Get to know us <FiArrowUpRight aria-hidden="true" /></Link></div>
+      </section>
+
+      <section className="h-achievement-section">
+        <div className="h-wrap">
+          <div className="h-section-heading"><div><span className="eyebrow">DEDICATION THAT GOES THE DISTANCE</span><h2>Beyond practice.<br />Beyond limits.</h2></div><Link className="h-text-link" to="/Record">Our achievements <FiArrowUpRight aria-hidden="true" /></Link></div>
+          <div className="h-record"><div className="h-record-copy"><span className="h-record-label"><FiAward aria-hidden="true" /> OSCAR WORLD RECORDS</span><div className="h-record-number">18<span>HOURS</span></div><h3>One incredible feat.<br />Unwavering determination.</h3><p>Rishi Prasanna’s 18-hour blindfolded, non-stop Silambam staff rotation. A testament to what focused practice can achieve.</p><div className="h-record-bottom"><span>02 OCTOBER 2022</span><Link to="/Record" aria-label="Explore our world records"><FiArrowUpRight aria-hidden="true" /></Link></div></div><img src={record} alt="Rishi Prasanna with his trainer at the 18-hour blindfolded Silambam world record event" loading="lazy" /></div>
+        </div>
+      </section>
+
+      <section className="h-section h-wrap" aria-labelledby="gallery-title"><div className="h-section-heading"><div><span className="eyebrow">LIFE AT SILAMBAM SHADOWS</span><h2 id="gallery-title">Every moment.<br />Part of the journey.</h2></div><p className="h-gallery-intro">The milestones, the friendships, and everything in between. A glimpse into our world.</p></div><PhotoGallery /></section>
+
+      <section className="h-event h-wrap"><span className="h-event-icon"><FiAward aria-hidden="true" /></span><div><span className="eyebrow">STEP INTO YOUR NEXT CHALLENGE</span><h3>Wrestling Camp 2026</h3><p>Explore the camp details and register your interest.</p></div><a className="h-text-link" href="https://docs.google.com/forms/d/e/1FAIpQLScQ_u_yx2iqRHbmpP-i4wNhNgdpOsGQc_PLjVZhjYBtphA_vw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">View camp registration <FiArrowUpRight aria-hidden="true" /></a></section>
+
+      <section className="h-affiliations h-wrap" aria-label="Our affiliations"><span className="eyebrow">CONNECTED BY A SHARED PURPOSE</span><div>{[[federation, 'International Silambam Federation'], [indiaFederation, 'Silambam Federation of India'], [tamilFederation, 'Tamil Nadu Silambam Federation'], [yogaAssociation, 'Indian Yoga Association']].map(([src, name]) => <Link to="/Affiliation" key={name}><img src={src} alt="" loading="lazy" /><span>{name}</span></Link>)}</div></section>
+
+      <section className="h-cta h-wrap" aria-labelledby="cta-title"><div className="h-cta-pattern" aria-hidden="true"><span /><span /><span /></div><div><span className="eyebrow">YOUR FIRST STEP CHANGES EVERYTHING</span><h2 id="cta-title">Your story of strength<br />starts <em>here.</em></h2><p>Bring your curiosity. We’ll help you find your path.</p></div><Link className="button button-forest" to="/contact">Let’s get started <FiArrowUpRight aria-hidden="true" /></Link></section>
+    </div>
+  );
+}

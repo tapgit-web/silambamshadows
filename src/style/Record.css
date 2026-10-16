@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+   
+}
+
+
+.Recordmain{
+   
+    height: auto;
+    width: 99vw;
+    /* margin-top: 90px; */
+    /* margin-bottom: -10PX; */
+    
+}
+.Recordhead{
+
+    color: #ffffff;
+    text-align: center;
+    text-justify: inter-word;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.Recordhead h1{
+    color: var(--bggreen-01);
+    width: 300px;
+    height: auto;
+    padding: 10px;
+    border-radius: 100px 0px 100px 0px;
+    border:var(--bggreen-01) 3px solid;
+}
+
+
+.Recorditems1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    min-height: 570px;
+    height: auto;
+    /* margin-bottom: 10px; */
+}
+
+
+
+@media (min-width: 320px) and (max-width: 768px) {
+   
+
+
+    .Recordmain{
+        width: 100vw;
+       
+        
+    }
+    .Recorditems1{
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        height: auto;
+        margin-top: 10px;
+        /* margin-bottom: 10px; */
+       
+    }
+
+    .Recordhead h1{
+        width: 150px;
+        height: auto;
+        padding: 15px;
+        font-size: 20px;
+        
+    }
+
+}
