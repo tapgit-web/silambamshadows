@@ -2,34 +2,34 @@
   {
     "source": "src/img/trainingimg/ss1.jpg",
     "output": "src/img/trainingimg/ss1.optimized.webp",
-    "before": 27289,
-    "after": 26216,
-    "width": 600,
-    "height": 422
+    "before": 738352,
+    "after": 84076,
+    "width": 1200,
+    "height": 670
   },
   {
-    "source": "src/img/trainingimg/adimurai.png",
+    "source": "src/img/trainingimg/adimurai.jpg",
     "output": "src/img/trainingimg/adimurai.optimized.webp",
-    "before": 53069,
-    "after": 6660,
-    "width": 600,
-    "height": 422
+    "before": 925213,
+    "after": 169966,
+    "width": 1200,
+    "height": 670
   },
   {
-    "source": "src/img/trainingimg/yoga.png",
+    "source": "src/img/trainingimg/yoga.jpg",
     "output": "src/img/trainingimg/yoga.optimized.webp",
-    "before": 19664,
-    "after": 3788,
-    "width": 600,
-    "height": 422
+    "before": 709617,
+    "after": 80192,
+    "width": 1200,
+    "height": 670
   },
   {
-    "source": "src/img/trainingimg/arrow.png",
+    "source": "src/img/trainingimg/arrow.jpg",
     "output": "src/img/trainingimg/arrow.optimized.webp",
-    "before": 48945,
-    "after": 8938,
-    "width": 600,
-    "height": 422
+    "before": 814216,
+    "after": 111938,
+    "width": 1200,
+    "height": 670
   },
   {
     "source": "src/img/record/kbor4.jpg",
@@ -80,20 +80,20 @@
     "height": 133
   },
   {
-    "source": "src/img/trainingimg/karate.png",
+    "source": "src/img/trainingimg/karate.jpg",
     "output": "src/img/trainingimg/karate.optimized.webp",
-    "before": 34212,
-    "after": 4762,
-    "width": 600,
-    "height": 422
+    "before": 681331,
+    "after": 65086,
+    "width": 1200,
+    "height": 670
   },
   {
-    "source": "src/img/trainingimg/valari.png",
+    "source": "src/img/trainingimg/valari.jpg",
     "output": "src/img/trainingimg/valari.optimized.webp",
-    "before": 43888,
-    "after": 5062,
-    "width": 600,
-    "height": 422
+    "before": 965847,
+    "after": 179106,
+    "width": 1200,
+    "height": 670
   },
   {
     "source": "src/img/staff/rishi.png",
@@ -294,5 +294,13 @@
     "after": 101008,
     "width": 1536,
     "height": 1024
+  },
+  {
+    "source": "src/img/trainingimg/Wrestling.jpg",
+    "output": "src/img/trainingimg/wrestling.optimized.webp",
+    "before": 920466,
+    "after": 164296,
+    "width": 1200,
+    "height": 670
   }
 ]

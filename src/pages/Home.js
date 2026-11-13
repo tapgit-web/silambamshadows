@@ -1,17 +1,21 @@
+import { useEffect, useState, useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { FiArrowUpRight, FiArrowDown, FiArrowRight, FiTarget, FiShield, FiUsers, FiAward, FiPlus } from 'react-icons/fi';
+import { FiArrowUpRight, FiArrowDown, FiArrowRight, FiArrowLeft, FiTarget, FiShield, FiUsers, FiAward } from 'react-icons/fi';
 import PhotoGallery from '../gallary/PhotoGallery';
 import useHeroMotion from '../animation/useHeroMotion';
 import CountUp from '../animation/CountUp';
 import '../style/home.css';
 import silambam from '../img/trainingimg/ss1.optimized.webp';
 import adimurai from '../img/trainingimg/adimurai.optimized.webp';
+import wrestling from '../img/trainingimg/wrestling.optimized.webp';
+import karate from '../img/trainingimg/karate.optimized.webp';
 import yoga from '../img/trainingimg/yoga.optimized.webp';
 import archery from '../img/trainingimg/arrow.optimized.webp';
-import community from '../img/record/kbor4.optimized.webp';
+import valari from '../img/trainingimg/valari.optimized.webp';
+import kalamRecord from '../img/record/kbor4.optimized.webp';
 import record from '../img/record/18hrs1.optimized.webp';
 import trainer1 from '../img/staff/VikiPhoto.optimized.webp';
-import trainer2 from '../img/staff/Bhuvana.optimized.webp';
+import trainer2 from '../img/staff/Prem.optimized.webp';
 import trainer3 from '../img/staff/Dinesh.optimized.webp';
 import federation from '../img/AFFILIATIONS/International_Silambam_Federation.avif';
 import indiaFederation from '../img/AFFILIATIONS/Silambam_Federation _of_India.avif';
@@ -21,12 +25,52 @@ import yogaAssociation from '../img/AFFILIATIONS/iya.optimized.webp';
 const programs = [
   { name: 'Silambam', type: 'THE ART OF THE STAFF', image: silambam, description: 'Find your flow. Build your strength. Carry a tradition forward.', className: 'silambam' },
   { name: 'Adimurai', type: 'STRENGTH WITH PURPOSE', image: adimurai, description: 'Develop confidence through the art of traditional self-defense.', className: 'adimurai' },
-  { name: 'Yoga', type: 'BALANCE FROM WITHIN', image: yoga, description: 'Reconnect with your body. Make room for a calmer mind.', className: 'yoga' },
+  { name: 'Wrestling', type: 'STRENGTH MEETS STRATEGY', image: wrestling, description: 'Build raw power, endurance, and mental toughness through ground control.', className: 'wrestling' },
+  { name: 'Karate', type: 'MOVE WITH CONFIDENCE', image: karate, description: 'Master physical control, lightning reflexes, and purposeful movement.', className: 'karate' },
+  { name: 'Yoga', type: 'BALANCE FROM WITHIN', image: yoga, description: 'Reconnect with your body. Make room for a calmer, focused mind.', className: 'yoga' },
   { name: 'Archery', type: 'FOCUS IN EVERY MOMENT', image: archery, description: 'Turn patience and precision into your next personal best.', className: 'archery' },
+  { name: 'Valari', type: 'KEEP A LEGACY ALIVE', image: valari, description: 'Master traditional Tamil weapon throwing with accuracy and poise.', className: 'valari' },
 ];
 
 export default function Home() {
   const heroRef = useHeroMotion();
+  const scrollRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const scrollDisciplines = useCallback((direction) => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const card = el.querySelector('.h-program');
+    const step = card ? card.offsetWidth + 22 : 332;
+    const maxScroll = el.scrollWidth - el.clientWidth;
+
+    if (direction > 0) {
+      if (el.scrollLeft >= maxScroll - 15) {
+        el.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        el.scrollBy({ left: step, behavior: 'smooth' });
+      }
+    } else {
+      if (el.scrollLeft <= 15) {
+        el.scrollTo({ left: maxScroll, behavior: 'smooth' });
+      } else {
+        el.scrollBy({ left: -step, behavior: 'smooth' });
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isPaused) return;
+    if (typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
+
+    const timer = setInterval(() => {
+      scrollDisciplines(1);
+    }, 3200);
+
+    return () => clearInterval(timer);
+  }, [isPaused, scrollDisciplines]);
   return (
     <div className="home">
       <section ref={heroRef} className="h-hero" aria-labelledby="hero-title">
@@ -58,27 +102,68 @@ export default function Home() {
         <div><strong><CountUp value={7} digits={2} /></strong><span>DISCIPLINES TO EXPLORE</span></div>
       </section>
 
+      <section className="h-event h-wrap"><span className="h-event-icon"><FiAward aria-hidden="true" /></span><div><span className="eyebrow">STEP INTO YOUR NEXT CHALLENGE</span><h3>Wrestling Camp 2026</h3><p>Explore the camp details and register your interest.</p></div><a className="h-text-link" href="https://docs.google.com/forms/d/e/1FAIpQLScQ_u_yx2iqRHbmpP-i4wNhNgdpOsGQc_PLjVZhjYBtphA_vw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">View camp registration <FiArrowUpRight aria-hidden="true" /></a></section>
+
       <section className="h-section h-programs" id="disciplines" aria-labelledby="disciplines-title">
         <div className="h-wrap">
           <div className="h-section-heading">
-            <div><span className="eyebrow">FIND YOUR DISCIPLINE</span><h2 id="disciplines-title">Different paths.<br />One stronger you.</h2></div>
-            <div className="h-heading-aside"><p>From the power of Silambam to the stillness of yoga. Find the practice that moves you.</p><Link className="h-text-link" to="/Training">Explore all disciplines <FiArrowUpRight aria-hidden="true" /></Link></div>
+            <div>
+              <span className="eyebrow">FIND YOUR DISCIPLINE</span>
+              <h2 id="disciplines-title">Different paths.<br />One stronger you.</h2>
+            </div>
+            <div className="h-heading-aside">
+              <p>From the power of Silambam to the stillness of yoga. Find the practice that moves you.</p>
+              <div className="h-programs-header-actions">
+                <Link className="h-text-link" to="/Training">Explore all disciplines <FiArrowUpRight aria-hidden="true" /></Link>
+                <div className="h-scroll-controls" aria-label="Scroll disciplines">
+                  <button type="button" className="h-scroll-btn" onClick={() => scrollDisciplines(-1)} aria-label="Previous disciplines">
+                    <FiArrowLeft aria-hidden="true" />
+                  </button>
+                  <button type="button" className="h-scroll-btn" onClick={() => scrollDisciplines(1)} aria-label="Next disciplines">
+                    <FiArrowRight aria-hidden="true" />
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="h-program-grid">{programs.map((program, i) => (
-            <Link to={'/Training#' + program.name.toLowerCase()} className={'h-program h-program-' + program.className} key={program.name}>
-              <div className="h-program-art"><span className="h-program-index">0{i + 1}</span><img src={program.image} alt="" loading="lazy" /><span className="h-program-art-label">{program.type}</span></div>
-              <div className="h-program-body"><div><h3>{program.name}</h3><span className="h-program-arrow"><FiArrowUpRight aria-hidden="true" /></span></div><p>{program.description}</p></div>
-            </Link>
-          ))}</div>
-          <div className="h-program-note"><span><FiPlus aria-hidden="true" /> Also discover Wrestling, Karate &amp; Valari</span><span>ALL AGES. ALL EXPERIENCE LEVELS.</span></div>
+          <div
+            className="h-program-grid"
+            ref={scrollRef}
+            tabIndex="0"
+            role="region"
+            aria-label="Disciplines carousel with auto scroll. Hover or focus to pause, or use arrow buttons."
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            onTouchStart={() => setIsPaused(true)}
+            onTouchEnd={() => setIsPaused(false)}
+            onFocus={() => setIsPaused(true)}
+            onBlur={() => setIsPaused(false)}
+          >
+            {programs.map((program, i) => (
+              <Link to={'/Training#' + program.name.toLowerCase()} className={'h-program h-program-' + program.className} key={program.name}>
+                <div className="h-program-art">
+                  <span className="h-program-index">0{i + 1}</span>
+                  <img src={program.image} alt="" loading="lazy" />
+                  <span className="h-program-art-label">{program.type}</span>
+                </div>
+                <div className="h-program-body">
+                  <div>
+                    <h3>{program.name}</h3>
+                    <span className="h-program-arrow"><FiArrowUpRight aria-hidden="true" /></span>
+                  </div>
+                  <p>{program.description}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
       <div className="h-values-strip" aria-label="Discipline, confidence, community and heritage"><span>DISCIPLINE</span><span aria-hidden="true">✳</span><span>CONFIDENCE</span><span aria-hidden="true">✳</span><span>COMMUNITY</span><span aria-hidden="true">✳</span><span>HERITAGE</span><span aria-hidden="true">✳</span></div>
 
       <section className="h-section h-wrap h-story" aria-labelledby="story-title">
-        <div className="h-story-visual"><img src={community} alt="Silambam Shadows students and trainers celebrating their achievements together" loading="lazy" /><div className="h-story-tag"><FiUsers aria-hidden="true" /><p>More than an academy.<br /><strong>A place to belong.</strong></p></div><span className="h-image-footnote">REAL PEOPLE. SHARED PROGRESS. THE SHADOWS FAMILY.</span></div>
-        <div className="h-story-content"><span className="eyebrow">THE SILAMBAM SHADOWS WAY</span><h2 id="story-title">Strong roots.<br />Stronger together.</h2><p>We believe strength is more than physical. It’s the focus to keep going, the confidence to try, and the people who stand beside you.</p><p>Founded in 2019 by Ramkumar P, Silambam Shadows brings traditional Indian martial arts to a new generation—one student, one practice, one breakthrough at a time.</p><div className="h-benefits"><div><FiTarget aria-hidden="true" /><span>Train with purpose</span></div><div><FiShield aria-hidden="true" /><span>Grow in confidence</span></div><div><FiUsers aria-hidden="true" /><span>Find your people</span></div><div><FiAward aria-hidden="true" /><span>Carry a legacy</span></div></div><Link className="h-text-link" to="/About">Get to know us <FiArrowUpRight aria-hidden="true" /></Link></div>
+        <div className="h-story-visual"><img src={kalamRecord} alt="Silambam Shadows students holding their United Kalam Book of Records certificates and medals for the 75-minute non-stop Silambam record" loading="lazy" /><div className="h-story-tag"><FiAward aria-hidden="true" /><p>United Kalam Record<br /><strong>75 Min · 75 Sec</strong></p></div><span className="h-image-footnote">UNITED KALAM BOOK OF RECORDS · 06 FEBRUARY 2022</span></div>
+        <div className="h-story-content"><span className="eyebrow">UNITED KALAM BOOK OF RECORDS</span><h2 id="story-title">75 minutes. 75 seconds.<br />A historic tribute in motion.</h2><p>On February 6, 2022, students of Silambam Shadows came together to set a record with the United Kalam Book of Records, performing continuous, non-stop Silambam staff rotation for 75 minutes and 75 seconds to commemorate India’s 75th independence year anniversary.</p><p>From young beginners to senior trainees, our students demonstrated remarkable stamina, focus, and synchronization—earning official record certificates and medals for carrying our traditional art forward.</p><div className="h-benefits"><div><FiAward aria-hidden="true" /><span>United Kalam Record</span></div><div><FiTarget aria-hidden="true" /><span>75m · 75s Non-Stop</span></div><div><FiUsers aria-hidden="true" /><span>Mass Student Feat</span></div><div><FiShield aria-hidden="true" /><span>75th Year Tribute</span></div></div><Link className="h-text-link" to="/Record">Explore our records <FiArrowUpRight aria-hidden="true" /></Link></div>
       </section>
 
       <section className="h-achievement-section">
@@ -89,8 +174,6 @@ export default function Home() {
       </section>
 
       <section className="h-section h-wrap" aria-labelledby="gallery-title"><div className="h-section-heading"><div><span className="eyebrow">LIFE AT SILAMBAM SHADOWS</span><h2 id="gallery-title">Every moment.<br />Part of the journey.</h2></div><p className="h-gallery-intro">The milestones, the friendships, and everything in between. A glimpse into our world.</p></div><PhotoGallery /></section>
-
-      <section className="h-event h-wrap"><span className="h-event-icon"><FiAward aria-hidden="true" /></span><div><span className="eyebrow">STEP INTO YOUR NEXT CHALLENGE</span><h3>Wrestling Camp 2026</h3><p>Explore the camp details and register your interest.</p></div><a className="h-text-link" href="https://docs.google.com/forms/d/e/1FAIpQLScQ_u_yx2iqRHbmpP-i4wNhNgdpOsGQc_PLjVZhjYBtphA_vw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">View camp registration <FiArrowUpRight aria-hidden="true" /></a></section>
 
       <section className="h-affiliations h-wrap" aria-label="Our affiliations"><span className="eyebrow">CONNECTED BY A SHARED PURPOSE</span><div>{[[federation, 'International Silambam Federation'], [indiaFederation, 'Silambam Federation of India'], [tamilFederation, 'Tamil Nadu Silambam Federation'], [yogaAssociation, 'Indian Yoga Association']].map(([src, name]) => <Link to="/Affiliation" key={name}><img src={src} alt="" loading="lazy" /><span>{name}</span></Link>)}</div></section>
 

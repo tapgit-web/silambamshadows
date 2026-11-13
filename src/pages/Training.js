@@ -7,7 +7,7 @@ import yoga from '../img/trainingimg/yoga.optimized.webp';
 import archery from '../img/trainingimg/arrow.optimized.webp';
 import karate from '../img/trainingimg/karate.optimized.webp';
 import valari from '../img/trainingimg/valari.optimized.webp';
-import wrestling from '../img/trainingimg/Wrestling.jpg';
+import wrestling from '../img/trainingimg/wrestling.optimized.webp';
 import '../style/inner-pages.css';
 
 const programs = [

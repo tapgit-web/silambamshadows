@@ -25,9 +25,9 @@ export default function Footer() {
             </Link>
             <p className="sf-description">Rooted in tradition.<br />Moving a generation forward.</p>
             <div className="sf-socials" aria-label="Follow Silambam Shadows">
-              <a href="https://www.instagram.com/silambamshadows?igsh=bzRmcmEwNWVuencz" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)"><FaInstagram /></a>
-              <a href="https://www.facebook.com/people/Silambam-Shadows/100063755782546/?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)"><FaFacebookF /></a>
-              <a href="https://www.youtube.com/@silambamshadows0208" target="_blank" rel="noopener noreferrer" aria-label="YouTube (opens in a new tab)"><FaYoutube /></a>
+              <a href="https://www.instagram.com/silambamshadows?igsh=bzRmcmEwNWVuencz" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)" className="sf-social-link sf-social-instagram"><FaInstagram /></a>
+              <a href="https://www.facebook.com/people/Silambam-Shadows/100063755782546/?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)" className="sf-social-link sf-social-facebook"><FaFacebookF /></a>
+              <a href="https://www.youtube.com/@silambamshadows0208" target="_blank" rel="noopener noreferrer" aria-label="YouTube (opens in a new tab)" className="sf-social-link sf-social-youtube"><FaYoutube /></a>
             </div>
           </div>
 

@@ -1,6 +1,6 @@
 .sg-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 24px; }
 .sg-filters { display: flex; gap: 8px; }
-.sg-filter { background: transparent; color: #68715f; border: 1px solid #d5dccb; border-radius: 30px; padding: 11px 20px; font-size: 10px; font-weight: 600; }
+.sg-filter { display: inline-flex; align-items: center; background: transparent; color: #68715f; border: 1px solid #d5dccb; border-radius: 30px; padding: 11px 20px; font-size: 10px; font-weight: 600; }
 .sg-filter:hover { background: #e7ecd9; }
 .sg-filter.sg-active { background: var(--forest); border-color: var(--forest); color: white; }
 .sg-count { font-size: 9px; color: #5e6b59; }

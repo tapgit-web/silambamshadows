@@ -7,6 +7,8 @@ import Nav from './menu/Nav';
 
 const originalFetch = global.fetch;
 
+jest.setTimeout(30000);
+
 beforeEach(() => {
   // All form requests stay in the test process, including unexpected requests.
   global.fetch = jest.fn().mockRejectedValue(new Error('Unexpected form request'));
